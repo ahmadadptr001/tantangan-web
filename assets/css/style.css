@@ -1,0 +1,293 @@
+@import url('https://fonts.googleapis.com/css2?family=Monoton&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    border: none;
+    list-style: none;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    border-radius: 10px;
+    background-color: white;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background: linear-gradient(pink, #E96377);
+}
+
+html, body {
+    font-family: system-ui;
+}
+
+header {
+    position: relative;
+    padding: 1.3rem 1rem;
+    background: #ff6579;
+}
+
+
+header, .navbar-brand, nav ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+header img {
+    border-radius: 50%;
+}
+
+header li {
+    padding: .5rem 1rem;
+    border-radius: .3rem;
+}
+
+header a {
+    color: black;
+}
+
+header li:hover a {
+    color: #ffffff;
+    text-decoration: underline;
+    text-underline-offset: 10px;
+}
+
+header .navbar-toggler span {
+    cursor: pointer;
+}
+
+header .navbar-toggler:hover span i {
+    transform: scale(1.05);
+}
+
+header .navbar-toggler span i {
+    font-size: 2.1rem;
+}
+.nav-alternatif {
+    position: absolute;
+    z-index: 99999999999999999999999;
+    bottom: -120%;
+    display: none;
+    right: .5rem;
+    border-radius: .5rem;
+    background: rgb(255, 230, 0);
+}
+
+main {
+}
+
+.hero {
+    color: white;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 50vh;
+    overflow: hidden;
+}
+
+.hero::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(255, 255, 255, 0.034), rgba(0, 0, 0, 0.87));
+    z-index: inherit;
+}
+
+.hero video {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -9999;
+
+}
+
+.hero h1 {
+    font-family: 'Monoton';
+    font-weight: 100;
+    font-size: 3rem;
+}
+
+.hero .hero-text {
+    z-index: 999;
+}
+
+.menu-title {
+    background-color: #E96377;
+    padding: 4rem;
+    padding-bottom: 2rem;
+    font-family: monoton;
+}
+
+.menu-title h1 {
+    font-size: 2.5rem;
+    font-weight: 300;
+    color: white;
+}
+
+.menu {
+    background-color: #E96377;
+    padding: 6rem;
+    padding-top: 3rem;
+    display: grid;
+    gap: 4rem;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+@media (min-width: 50px) {
+    .menu {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .menu .card-header {
+        height: 200px;
+    }
+
+    nav {
+        display: none;
+    }
+
+    .navbar-toggler {
+        display: block;
+    }
+    
+}
+
+@media (min-width: 768px) {
+    .menu {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .menu .card-header {
+        height: 150px;
+    }
+
+    nav {
+        display: flex;
+    }
+
+    .navbar-toggler {
+        display: none;
+    }
+}
+
+@media (min-width: 920px) {
+    .menu {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.menu .card {
+    padding: 2rem;
+    border-radius: .4rem;
+    background: #f726427e;
+}
+
+.menu .card:hover {
+    transform: translate(0, -1rem);
+}
+.menu .card-header {
+    overflow: hidden;
+}
+
+.menu .card-header img {
+    height: 200px;
+    width: 100%;
+    object-fit: cover;
+    border-radius: .5rem;
+}
+
+.menu .card-header:hover img{
+    transform: scale(1.05);
+}
+
+.menu .card-body {
+    line-height: 1.5rem;
+}
+
+.menu .card-body h3 {
+    font-family: cursive;
+    color: #fdf900;
+    margin-top: 1.3rem;
+    margin-bottom: 1rem;
+}
+
+.menu .card-body p {
+    font-family: cursive;
+    color: #000000;
+    font-size: .8rem;
+}
+
+.menu .card-body button {
+    cursor: pointer;
+    padding: .7rem 1.5rem;
+    border-radius: 50rem;
+    margin: 1rem 0;
+    background: orange;
+    font-size: .9rem;
+}
+
+.menu .card-body button:hover {
+    transform: translate(-0.2rem, -0.2rem);
+    box-shadow: 5px 5px 5px black;
+}
+
+.whatsapp-wrapper {
+    height: 50px;
+    position: fixed;
+    bottom: 4rem;
+    right: 4rem;
+    z-index: 999999999999999;
+    border-radius: 50%;
+    background-color: green;
+    color: white;
+    font-size: 3rem;
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+}
+
+.whatsapp-wrapper:hover {
+    transform: scale(1.05);
+}
+
+.whatsapp-wrapper a {
+    color: white;
+}
+
+.whatsapp-wrapper a:visited {
+    color: white;
+    height: 50px;
+}
+
+footer {
+    padding: 3rem;
+    background: linear-gradient(rgba(0, 0, 0, 0.219) 5%, white 35%);
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);   
+}
+
+footer .pembayaran {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+footer .deskripsi {
+    font-size: .8rem;
+    margin-top: .5rem;
+}
+
+footer .download {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr)
+}
