@@ -148,6 +148,7 @@ main {
 @media (min-width: 50px) {
     .menu {
         grid-template-columns: repeat(1, 1fr);
+        padding: 3rem;
     }
     .menu .card-header {
         height: 200px;
@@ -160,7 +161,25 @@ main {
     .navbar-toggler {
         display: block;
     }
+
+    footer {
+        grid-template-columns: repeat(1, 1fr) !important;   
+    }
+
+    footer section {
+        margin-top: 1.3rem;
+    }
     
+}
+
+@media (min-width: 576px) {
+    .menu {
+        padding: 6rem;
+    }
+
+    footer {
+        grid-template-columns: repeat(2, 1fr) !important;   
+    }
 }
 
 @media (min-width: 768px) {
@@ -183,6 +202,10 @@ main {
 @media (min-width: 920px) {
     .menu {
         grid-template-columns: repeat(3, 1fr);
+    }
+
+    footer {
+        grid-template-columns: repeat(4, 1fr) !important;   
     }
 }
 
