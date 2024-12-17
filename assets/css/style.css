@@ -161,6 +161,10 @@ main {
     .navbar-toggler {
         display: block;
     }
+    .whatsapp-wrapper {
+        right: 2rem !important;
+        bottom: 2rem !important;
+    }
 
     footer {
         grid-template-columns: repeat(1, 1fr) !important;   
@@ -175,6 +179,11 @@ main {
 @media (min-width: 576px) {
     .menu {
         padding: 6rem;
+    }
+
+    .whatsapp-wrapper {
+        right: 4rem !important;
+        bottom: 4rem !important;
     }
 
     footer {
@@ -265,19 +274,11 @@ main {
 }
 
 .whatsapp-wrapper {
-    height: 50px;
     position: fixed;
     bottom: 4rem;
     right: 4rem;
     z-index: 999999999999999;
-    border-radius: 50%;
-    background-color: green;
-    color: white;
-    font-size: 3rem;
-    display: flex;
     cursor: pointer;
-    align-items: center;
-    justify-content: center;
 }
 
 .whatsapp-wrapper:hover {
@@ -285,7 +286,14 @@ main {
 }
 
 .whatsapp-wrapper a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    font-size: 3rem;
     color: white;
+    background-color: green;
+    border-radius: 50%;
 }
 
 .whatsapp-wrapper a:visited {
